@@ -1,0 +1,27 @@
+class Student {
+    private int id;
+    private String name;
+
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public void display() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+    }
+}
+
+class CollegeStudent extends Student {
+    CollegeStudent(int id, String name) {
+        super(id, name);
+    }
+}
+
+public class StudentManagementSystem {
+    public static void main(String[] args) {
+        CollegeStudent student = new CollegeStudent(101, "Swathi");
+        student.display();
+    }
+}
